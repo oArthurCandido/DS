@@ -42,7 +42,7 @@ export const Secondary: Story = {
   args: {
     children: "download",
     variant: "secondary",
-    size: "lg"
+   
     
   },
 };
