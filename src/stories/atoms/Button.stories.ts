@@ -3,6 +3,9 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { Button } from "@/components/atoms";
 
 const meta = {
+  parameters: {
+    layout: "centered",
+  },
   title: "Components/Button",
   component: Button,
   tags: ["autodocs"],
@@ -23,8 +26,11 @@ const meta = {
         type: "radio",
         
       },
+      onClick: () => window.alert("Button Clicked"),
     },
+      
   },
+  
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -35,36 +41,37 @@ export const Default: Story = {
     children: "Button",
     variant: "default",
     size: "default",
+    onClick: () => window.alert("Button Clicked"),
   },
 };
 
-export const Secondary: Story = {
-  args: {
-    children: "download",
-    variant: "secondary",
+// export const Secondary: Story = {
+//   args: {
+//     children: "download",
+//     variant: "secondary",
    
     
-  },
-};
+//   },
+// };
 
-export const Destructive: Story = {
-  args: {
-    children: "download",
-    variant: "destructive",
+// export const Destructive: Story = {
+//   args: {
+//     children: "download",
+//     variant: "destructive",
     
-  },
-};
+//   },
+// };
 
-export const Ghost: Story = {
-  args: {
-    children: "download",
-    variant: "ghost",
-  },
-};
+// export const Ghost: Story = {
+//   args: {
+//     children: "download",
+//     variant: "ghost",
+//   },
+// };
 
-export const Link: Story = {
-  args: {
-    children: "download",
-    variant: "link",
-  },
-};
+// export const Link: Story = {
+//   args: {
+//     children: "download",
+//     variant: "link",
+//   },
+// };
